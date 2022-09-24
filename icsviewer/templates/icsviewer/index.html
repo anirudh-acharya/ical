@@ -1,0 +1,20 @@
+{% if latest_events_list %}
+    <table>
+        <tr>
+            <th>Event Summary</th>
+            <th>Event Location</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+        {% for event in latest_events_list %}
+        <tr>
+            <td><a href="{% url 'icsviewer:detail' event.id %}">{{ event.summary }}</a></td>
+            <td>{{ event.location }}</td>
+            <td>{{ event.start_date}}</td>
+            <td>{{ event.end_date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No events are available. Please drop by later...</p>
+{% endif %}
