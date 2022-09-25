@@ -1,1 +1,1 @@
-web: gunicorn ical.wsgi.application
+web: gunicorn ical.wsgi
