@@ -1,1 +1,1 @@
-web: gunicorn icsviewer.wsgi
+web: gunicorn ical.wsgi.application
